@@ -5,3 +5,4 @@ forge-std/=lib/forge-std/src/
 openzeppelin-contracts/=lib/trusted-multicall-forwarder/lib/openzeppelin-contracts/
 synthetix-v3/=lib/synthetix-v3/
 trusted-multicall-forwarder/=lib/trusted-multicall-forwarder/src/
+@pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity
