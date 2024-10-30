@@ -18,6 +18,7 @@ import {ArbitrumParameters} from
 import {ArbitrumSepoliaParameters} from
     "script/utils/parameters/ArbitrumSepoliaParameters.sol";
 import {TestHelpers} from "test/utils/TestHelpers.sol";
+import "@pythnetwork/pyth-sdk-solidity/IPyth.sol";
 
 /// @title Contract for bootstrapping the SMv3 system for testing purposes
 /// @dev it deploys the SMv3 Engine and EngineExposed, and defines
@@ -68,6 +69,9 @@ contract Bootstrap is
     address public zap;
     address public usdc;
     address public weth;
+
+    // Arbitrum One pyth contract
+    IPyth public pyth = IPyth(0xff1a0f4744e8582DF1aE09D5611b887B6a12925C);
 
     // Synthetix v3 Andromeda Spot Market ID for $sUSDC
     uint128 public sUSDCId;
