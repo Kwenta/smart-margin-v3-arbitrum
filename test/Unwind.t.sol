@@ -112,6 +112,5 @@ contract UnwindTest is Bootstrap {
         uint256 balanceAfter = WETH.balanceOf(DEBT_ACTOR);
 
         assertGt(balanceAfter, balanceBefore);
-        availableMargin = perpsMarketProxy.getAvailableMargin(ACCOUNT_ID);
     }
 }
