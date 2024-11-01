@@ -144,10 +144,7 @@ contract Bootstrap is
         uint256 proportionOut,
         uint256 slippageLimitPct,
         address userAddress
-    )
-        internal
-        returns (string memory)
-    {
+    ) internal returns (string memory) {
         return string.concat(
             '{"chainId": ',
             vm.toString(chainId),
@@ -175,10 +172,7 @@ contract Bootstrap is
         uint256 proportionOut,
         uint256 slippageLimitPct,
         address userAddress
-    )
-        internal
-        returns (uint256 status, bytes memory data)
-    {
+    ) internal returns (uint256 status, bytes memory data) {
         string memory params = getOdosQuoteParams(
             chainId,
             tokenIn,
@@ -197,10 +191,7 @@ contract Bootstrap is
         address tokenIn,
         uint256 amountIn,
         address tokenOut
-    )
-        internal
-        returns (string memory pathId)
-    {
+    ) internal returns (string memory pathId) {
         (, bytes memory data) = getOdosQuote(
             chainId,
             tokenIn,
@@ -247,7 +238,6 @@ contract Bootstrap is
         Transaction memory rawTxDetail = abi.decode(transaction, (Transaction));
         return rawTxDetail.data;
     }
-
 }
 
 contract BootstrapArbitrum is Setup, ArbitrumParameters {

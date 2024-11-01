@@ -14,13 +14,13 @@ contract UnwindTest is Bootstrap {
         address(0x72A8EA777f5Aa58a1E5a405931e2ccb455B60088);
     uint128 public constant ACCOUNT_ID =
         170_141_183_460_469_231_731_687_303_715_884_105_766;
-    uint256 public constant INITIAL_DEBT = 2904906141298364509;
+    uint256 public constant INITIAL_DEBT = 2_904_906_141_298_364_509;
 
     address constant USDC_ADDR = 0xaf88d065e77c8cC2239327C5EDb3A432268e5831;
     address constant WETH_ADDR = 0x82aF49447D8a07e3bd95BD0d56f35241523fBab1;
 
     // 1600104571620674
-    uint256 SWAP_AMOUNT = 1600104571620674;
+    uint256 SWAP_AMOUNT = 1_600_104_571_620_674;
 
     bytes swapPath;
     string pathId;
@@ -90,18 +90,18 @@ contract UnwindTest is Bootstrap {
         vm.startPrank(DEBT_ACTOR);
 
         pathId = getOdosQuotePathId(
-                ARBITRUM_CHAIN_ID, ARBITRUM_WETH, SWAP_AMOUNT, ARBITRUM_USDC
-            );
+            ARBITRUM_CHAIN_ID, ARBITRUM_WETH, SWAP_AMOUNT, ARBITRUM_USDC
+        );
 
         swapPath = getAssemblePath(pathId);
 
         engine.unwindCollateral({
             _accountId: ACCOUNT_ID,
             _collateralId: 4,
-            _collateralAmount: 34357000000000000,
+            _collateralAmount: 34_357_000_000_000_000,
             _collateral: WETH_ADDR,
-            _zapMinAmountOut: 2732065100000000000,
-            _unwrapMinAmountOut: 32606510850000000,
+            _zapMinAmountOut: 2_732_065_100_000_000_000,
+            _unwrapMinAmountOut: 32_606_510_850_000_000,
             _swapMaxAmountIn: SWAP_AMOUNT,
             _path: swapPath
         });
