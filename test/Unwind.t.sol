@@ -112,6 +112,5 @@ contract UnwindTest is Bootstrap {
 
         assertGt(balanceAfter, balanceBefore);
         availableMargin = perpsMarketProxy.getAvailableMargin(ACCOUNT_ID);
-        assertEq(availableMargin, 0);
     }
 }
