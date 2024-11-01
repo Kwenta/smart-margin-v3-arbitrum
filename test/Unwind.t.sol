@@ -20,7 +20,7 @@ contract UnwindTest is Bootstrap {
     address constant WETH_ADDR = 0x82aF49447D8a07e3bd95BD0d56f35241523fBab1;
 
     function setUp() public {
-        vm.rollFork(266_847_904);
+        vm.rollFork(ARBITRUM_BLOCK_NUMBER);
         initializeArbitrum();
 
         synthMinter.mint_sUSD(DEBT_ACTOR, AMOUNT);
