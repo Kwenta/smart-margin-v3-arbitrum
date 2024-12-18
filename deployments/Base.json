@@ -6,5 +6,11 @@
     "test": {
         "EngineImplementation": "0x3eF73cD1B3B708ab1F2ccB4AcDA036Ac3FDc3615",
         "EngineProxy": "0xA2dF816B2C5D8d799069d6a8a9f8464D402b5D25"
+    },
+    "Arb-Odos-Release": {
+        "Zap": "0x291ABc17ee5c424d4cb0c7DFcE9A4af03497f8E2",
+        "EngineImplementation": "0x0741bB5Bc55565f88E003236d31fcfaEEE533A4a",
+        "EngineProxy": "0x7E0e36364cE481263Fa9B011e0683056f600375F",
+        "MulticallerWithSender": "0xE5b6FD96EE2699B6a3dd37CF2FF01043e1D1f8Fb"
     }
 }
